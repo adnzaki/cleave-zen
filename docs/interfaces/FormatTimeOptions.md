@@ -1,4 +1,4 @@
-[cleave-zen](../README.md) / [Exports](../modules.md) / FormatTimeOptions
+[z-cleave-zen](../README.md) / [Exports](../modules.md) / FormatTimeOptions
 
 # Interface: FormatTimeOptions
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[time/types.ts:9](https://github.com/nosir/cleave-zen/blob/f242cfd/src/time/types.ts#L9)
+[time/types.ts:9](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/time/types.ts#L9)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:8](https://github.com/nosir/cleave-zen/blob/f242cfd/src/time/types.ts#L8)
+[time/types.ts:8](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/time/types.ts#L8)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[time/types.ts:11](https://github.com/nosir/cleave-zen/blob/f242cfd/src/time/types.ts#L11)
+[time/types.ts:11](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/time/types.ts#L11)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[time/types.ts:10](https://github.com/nosir/cleave-zen/blob/f242cfd/src/time/types.ts#L10)
+[time/types.ts:10](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/time/types.ts#L10)

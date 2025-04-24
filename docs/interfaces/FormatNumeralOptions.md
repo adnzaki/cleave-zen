@@ -1,4 +1,4 @@
-[cleave-zen](../README.md) / [Exports](../modules.md) / FormatNumeralOptions
+[z-cleave-zen](../README.md) / [Exports](../modules.md) / FormatNumeralOptions
 
 # Interface: FormatNumeralOptions
 
@@ -6,6 +6,7 @@
 
 ### Properties
 
+- [allowArithmetic](FormatNumeralOptions.md#allowarithmetic)
 - [delimiter](FormatNumeralOptions.md#delimiter)
 - [numeralDecimalMark](FormatNumeralOptions.md#numeraldecimalmark)
 - [numeralDecimalScale](FormatNumeralOptions.md#numeraldecimalscale)
@@ -19,13 +20,23 @@
 
 ## Properties
 
+### allowArithmetic
+
+• `Optional` **allowArithmetic**: `boolean`
+
+#### Defined in
+
+[numeral/types.ts:15](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L15)
+
+___
+
 ### delimiter
 
 • `Optional` **delimiter**: `string`
 
 #### Defined in
 
-[numeral/types.ts:5](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L5)
+[numeral/types.ts:5](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L5)
 
 ___
 
@@ -35,7 +46,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:8](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L8)
+[numeral/types.ts:8](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L8)
 
 ___
 
@@ -45,7 +56,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:9](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L9)
+[numeral/types.ts:9](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L9)
 
 ___
 
@@ -55,7 +66,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:7](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L7)
+[numeral/types.ts:7](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L7)
 
 ___
 
@@ -65,7 +76,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:10](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L10)
+[numeral/types.ts:10](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L10)
 
 ___
 
@@ -75,7 +86,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:6](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L6)
+[numeral/types.ts:6](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L6)
 
 ___
 
@@ -85,7 +96,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:14](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L14)
+[numeral/types.ts:14](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L14)
 
 ___
 
@@ -95,7 +106,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:13](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L13)
+[numeral/types.ts:13](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L13)
 
 ___
 
@@ -105,7 +116,7 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:12](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L12)
+[numeral/types.ts:12](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L12)
 
 ___
 
@@ -115,4 +126,4 @@ ___
 
 #### Defined in
 
-[numeral/types.ts:11](https://github.com/nosir/cleave-zen/blob/f242cfd/src/numeral/types.ts#L11)
+[numeral/types.ts:11](https://github.com/adnzaki/cleave-zen/blob/22b1d89/src/numeral/types.ts#L11)
