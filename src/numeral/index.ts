@@ -21,11 +21,13 @@ const format = ({
   signBeforePrefix,
   tailPrefix,
   prefix,
+  allowArithmetic,
 }: FormatNumeralRequiredProps): string => {
   let parts: string[]
   let partSignAndPrefix: string
   let partInteger: string
   let partDecimal: string = ''
+  const stripNumeric = allowArithmetic ? /[^\d+\-*/M]/g : /[^\dM-]/g
 
   // strip alphabet letters
   let result: string = value
@@ -36,13 +38,13 @@ const format = ({
 
     // strip non numeric letters except minus and "M"
     // this is to ensure prefix has been stripped
-    .replace(/[^\dM-]/g, '')
+    .replace(stripNumeric, '')
 
     // replace the leading minus with reserved placeholder
     .replace(/^-/, 'N')
 
     // strip the other minus sign (if present)
-    .replace(/-/g, '')
+    .replace(allowArithmetic ? '' : /-/g, '')
 
     // replace the minus sign (if present)
     .replace('N', numeralPositiveOnly ?? false ? '' : '-')
@@ -79,6 +81,23 @@ const format = ({
     partInteger = partInteger.slice(0, numeralIntegerScale)
   }
 
+  const formatThousandStyle = () => {
+    if(allowArithmetic) {
+      // clean up double operators
+      partInteger = partInteger.replace(/([+\-*/]){2,}/g, match =>
+        match.slice(-1)
+      )
+
+      partInteger = partInteger.split(/([+\-*/])/).map(token => {
+        const clean = token.replace(/[^0-9]/g, '');
+        if (!clean) return token; // jika token adalah operator atau kosong, biarkan
+        return clean.replace(/\B(?=(\d{3})+(?!\d))/g, delimiter); // format angka
+      }).join('');
+    } else {
+      partInteger = partInteger.replace(/(\d)(?=(\d{3})+$)/g, '$1' + delimiter)
+    }
+  }
+
   switch (numeralThousandsGroupStyle) {
     case NumeralThousandGroupStyles.LAKH:
       partInteger = partInteger.replace(/(\d)(?=(\d\d)+\d$)/g, '$1' + delimiter)
@@ -89,7 +108,7 @@ const format = ({
       break
 
     case NumeralThousandGroupStyles.THOUSAND:
-      partInteger = partInteger.replace(/(\d)(?=(\d{3})+$)/g, '$1' + delimiter)
+      formatThousandStyle()
       break
   }
 
@@ -124,6 +143,7 @@ export const formatNumeral = (
     tailPrefix = false,
     signBeforePrefix = false,
     prefix = '',
+    allowArithmetic = false,
   } = options ?? {}
 
   value = format({
@@ -138,6 +158,7 @@ export const formatNumeral = (
     tailPrefix,
     signBeforePrefix,
     prefix,
+    allowArithmetic,
   })
 
   return value

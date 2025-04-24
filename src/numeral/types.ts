@@ -12,6 +12,7 @@ export interface FormatNumeralOptions {
   stripLeadingZeroes?: boolean
   signBeforePrefix?: boolean
   prefix?: string
+  allowArithmetic?: boolean
 }
 
 export interface FormatNumeralRequiredProps {
@@ -26,4 +27,5 @@ export interface FormatNumeralRequiredProps {
   stripLeadingZeroes: boolean
   signBeforePrefix: boolean
   prefix: string
+  allowArithmetic: boolean
 }
